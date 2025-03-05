@@ -17,16 +17,23 @@ This project demonstrates how to build generative AI applications using **Amazon
 ## Setup
 1. Clone this repository:
    ```sh
-   git clone https://github.com/yourusername/amazon-bedrock-boto3.git
-   cd amazon-bedrock-boto3
+   git clone https://github.com/aneridesai-19/Amazon-bedrock-GenAI-with-Boto3
    ```
-2. Install dependencies:
-   ```sh
-   pip install boto3
-   ```
-3. Configure AWS credentials:
+2. Configure AWS credentials:
    ```sh
    aws configure
+   ```
+3. Create virtual environment:
+   ```sh
+   python -m venv venv
+   ```
+4. Activate virtual environment:
+   ```sh
+   venv\Script\activate
+   ```
+5. Install dependencies:
+   ```sh
+   pip install boto3
    ```
 
 ## Usage
