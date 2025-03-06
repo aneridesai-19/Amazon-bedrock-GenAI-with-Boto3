@@ -1,3 +1,5 @@
+# TITAN TEXT LITE MODEL:
+
 import json
 import boto3
 
@@ -12,7 +14,7 @@ def getResponse():
     model_id = "amazon.titan-text-lite-v1"
 
     # Prepare the input prompt
-    prompt = "Who are you?"
+    prompt = "What is generative ai?"
 
     # Prepare the request payload (without topK)
     payload = {
@@ -38,3 +40,4 @@ def getResponse():
 
 if __name__ == "__main__":
     getResponse()
+
