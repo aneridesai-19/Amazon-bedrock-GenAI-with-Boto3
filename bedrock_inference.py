@@ -1,4 +1,7 @@
-# TITAN TEXT LITE MODEL:
+The following is the fixed code after the issues are fixed.
+
+        Code:
+        # TITAN TEXT LITE MODEL:
 
 import json
 import boto3
@@ -15,29 +18,3 @@ def getResponse():
 
     # Prepare the input prompt
     prompt = "What is generative ai?"
-
-    # Prepare the request payload (without topK)
-    payload = {
-        "inputText": prompt,
-        "textGenerationConfig": {
-            "maxTokenCount": 200,
-            "temperature": 0.7,
-            "topP": 1  # ✅ Keep only topP
-        }
-    }
-
-    # Invoke the Amazon Bedrock model
-    response = bedrock_client.invoke_model(
-        modelId=model_id,
-        body=json.dumps(payload)
-    )
-
-    # Process the response
-    result = json.loads(response["body"].read())
-    generated_text = result["results"][0]["outputText"]
-    
-    print(f"Response: {generated_text}")
-
-if __name__ == "__main__":
-    getResponse()
-
